@@ -1,13 +1,11 @@
-import { Button } from "@/components/atoms/Button";
-import type { NextPage } from "next";
+import { BasicLayout } from "@/components/layouts/BasicLayout";
+import { Top } from "@/components/templates/Top";
+import { NextPageWithLayout } from "@/lib/next/types";
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <p>TOPです</p>
-      <Button href="/">ボタンです</Button>
-    </div>
-  );
+const Page: NextPageWithLayout = () => {
+  return <Top />;
 };
 
-export default Home;
+Page.getLayout = BasicLayout;
+
+export default Page;
