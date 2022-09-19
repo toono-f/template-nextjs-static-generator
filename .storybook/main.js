@@ -9,6 +9,14 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/preset-scss",
     "storybook-addon-next-router",
+    {
+      name: "@storybook/addon-postcss",
+      options: {
+        postcssLoaderOptions: {
+          implementation: require("postcss"),
+        },
+      },
+    },
   ],
   framework: "@storybook/react",
   core: {
