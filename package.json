@@ -10,7 +10,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "tailwind-config-viewer": "tailwind-config-viewer -o",
-    "hygen:component": "hygen component new"
+    "hygen:component": "hygen component new",
+    "hygen:page": "hygen page new"
   },
   "dependencies": {
     "next": "12.3.0",
