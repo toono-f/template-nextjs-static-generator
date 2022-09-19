@@ -18,7 +18,7 @@ module.exports = {
       black: "#000000",
     },
     fontFamily: {
-      sans: ["ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "sans-serif"],
+      sans: ["Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "sans-serif"],
     },
     fontSize: object(80),
     fontWeight: {
