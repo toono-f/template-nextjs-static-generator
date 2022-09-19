@@ -1,5 +1,5 @@
-import styles from "./Button.module.scss";
 import Link from "next/link";
+import styles from "./Button.module.scss";
 
 type ButtonProps = {
   href: string;
