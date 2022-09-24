@@ -1,15 +1,11 @@
 export const Skills = [
-  { name: "HTML" },
-  { name: "CSS" },
+  { name: "HTML/CSS" },
   { name: "JavaScript" },
   { name: "TypeScript" },
   { name: "React" },
   { name: "Next.js" },
   { name: "PHP" },
   { name: "WordPress" },
-  { name: "UI/UX" },
-  { name: "Figma" },
-  { name: "XD" },
-  { name: "Writing" },
+  { name: "Figma/XD" },
   { name: "SEO" },
 ];
