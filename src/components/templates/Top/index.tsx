@@ -1,6 +1,6 @@
 import { Button } from "@/components/atoms/Button";
 import { List } from "@/components/molecules/List";
-import { Skills } from "@/data/skills";
+import { Skills } from "@/data/Skills";
 
 export const Top = () => {
   return (
