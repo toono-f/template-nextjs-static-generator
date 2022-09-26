@@ -12,12 +12,6 @@
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-  body {
-    image-rendering: -webkit-optimize-contrast;
-  }
-}
-
 @media print {
   body {
     zoom: 0.5;
