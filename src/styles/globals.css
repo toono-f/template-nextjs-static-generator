@@ -11,3 +11,10 @@
     background: black;
   }
 }
+
+@media print {
+  body {
+    zoom: 0.5;
+    -webkit-print-color-adjust: exact;
+  }
+}
