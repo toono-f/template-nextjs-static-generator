@@ -5,8 +5,10 @@ export const Seo = {
   openGraph: {
     url: "サイトのURL",
     type: "website",
+    description: "サイトの説明",
     locale: "ja_JP",
     site_name: "サイト名",
+    images: [{ url: "" }],
   },
 };
 
