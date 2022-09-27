@@ -9,6 +9,7 @@ import { ReactElement } from "react";
 export const BasicLayout = (page: ReactElement) => {
   return (
     <>
+      {/* TODO: canonical指定 */}
       <NextSeo {...Seo} />
       <Head>
         <meta name="keywords" content="" />
