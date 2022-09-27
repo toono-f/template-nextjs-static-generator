@@ -1,0 +1,164 @@
+@use "sass:math";
+// ==========================================================================
+// breakpoint
+// ==========================================================================
+$breakpoints: (
+  "md": em(767),
+  "lg": em(1023),
+  "xl": em(1365),
+);
+@mixin mq($size: "md") {
+  @media screen and (max-width: #{map-get($breakpoints, $size)}) {
+    @content;
+  }
+}
+@mixin print {
+  @media print {
+    @content;
+  }
+}
+@mixin hover {
+  &:hover {
+    @media screen and (min-width: em(767 + 1)) and (hover: hover) {
+      @content;
+    }
+  }
+}
+// ==========================================================================
+// hover
+// ==========================================================================
+@mixin hover-opacity {
+  @media screen and (min-width: em(767 + 1)) and (hover: hover) {
+    cursor: pointer;
+    transition: opacity 0.5s;
+  }
+  @include hover {
+    opacity: 0.7;
+  }
+}
+// ==========================================================================
+// size
+// ==========================================================================
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+@mixin size-rem($w, $h: $w) {
+  width: rem($w);
+  height: rem($h);
+}
+@mixin size-tb($w, $h: $w) {
+  width: tb($w);
+  height: tb($h);
+}
+@mixin size-sp($w, $h: $w) {
+  width: sp($w);
+  height: sp($h);
+}
+// ==========================================================================
+// content
+// ==========================================================================
+@mixin element($content: "", $d: block) {
+  display: $d;
+  content: $content;
+}
+// ==========================================================================
+// flex
+// ==========================================================================
+@mixin flex($jc: null, $ai: null, $w: null, $d: null) {
+  display: flex;
+  flex-direction: $d;
+  flex-wrap: $w;
+  align-items: $ai;
+  justify-content: $jc;
+}
+@mixin inline-flex($jc: null, $ai: null, $w: null, $d: null) {
+  display: inline-flex;
+  flex-direction: $d;
+  flex-wrap: $w;
+  align-items: $ai;
+  justify-content: $jc;
+}
+// ==========================================================================
+// font-size
+// ==========================================================================
+@mixin fs-all($sp: null, $pc: null) {
+  @if ($pc) {
+    font-size: rem($pc);
+    @include mq(lg) {
+      font-size: rem($pc);
+    }
+  } @else {
+    font-size: rem($sp);
+    @include mq(lg) {
+      font-size: rem($sp);
+    }
+  }
+  @if ($sp) {
+    @include mq(md) {
+      font-size: rem($sp);
+    }
+  }
+}
+// ==========================================================================
+// img
+// ==========================================================================
+@mixin img-cover($obj: contain, $po: relative) {
+  position: $po;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: $obj;
+  }
+}
+// ==========================================================================
+// position
+// ==========================================================================
+@mixin absolute($t: null, $r: null, $b: null, $l: null, $z: null) {
+  position: absolute;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+  z-index: $z;
+}
+@mixin absolute-wide($z: null) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z;
+}
+// ==========================================================================
+// center
+// ==========================================================================
+@mixin center($t: 50%, $b: -50%, $l: 50%, $r: -50%) {
+  position: absolute;
+  top: $t;
+  left: $l;
+  transform: translate($r, $b);
+}
+@mixin center-x($position: absolute, $t: null, $b: null) {
+  position: $position;
+  top: $t;
+  bottom: $b;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin center-y($position: absolute, $r: null, $l: null) {
+  position: $position;
+  top: 50%;
+  right: $r;
+  left: $l;
+  transform: translateY(-50%);
+}
+// ==========================================================================
+// letter-spacing
+// ==========================================================================
+@mixin letter($fs, $ls) {
+  letter-spacing: math.div($ls, $fs) + em;
+}
