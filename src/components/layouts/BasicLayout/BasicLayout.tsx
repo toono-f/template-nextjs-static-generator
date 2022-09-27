@@ -11,6 +11,7 @@ export const BasicLayout = (page: ReactElement) => {
     <>
       <NextSeo {...Seo} />
       <Head>
+        <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <script
           dangerouslySetInnerHTML={{
