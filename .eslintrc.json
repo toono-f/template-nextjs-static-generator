@@ -1,4 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier", "plugin:storybook/recommended"],
-  "ignorePatterns": ["*.config.js"]
+  "ignorePatterns": ["*.config.js"],
+  "rules": {
+    "@typescript-eslint/no-var-requires" : "off"
+  }
 }
