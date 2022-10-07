@@ -6,15 +6,15 @@ const inputValidator = (input) => {
 
 module.exports = [
   {
-    type: "input",
-    name: "name",
-    message: "コンポーネントの名前を指定してください。ex) Button",
-    validate: inputValidator,
+    type: "select",
+    name: "path",
+    message: "コンポーネントの粒度を選択してください",
+    choices: ["atoms", "molecules", "organisms", "templates", "layouts"],
   },
   {
     type: "input",
-    name: "path",
-    message: "src/components以下のパスを指定してください。ex) atoms",
+    name: "name",
+    message: "コンポーネント名をパスカルケースで入力してください(例: ButtonSample)",
     validate: inputValidator,
   },
   {
@@ -29,6 +29,14 @@ module.exports = [
     type: "toggle",
     name: "withStory",
     message: ".stories.tsxも一緒に作成しますか？",
+    disabled: "いいえ",
+    enabled: "はい",
+    initial: true,
+  },
+  {
+    type: "toggle",
+    name: "withTest",
+    message: ".spec.tsxも一緒に作成しますか？",
     disabled: "いいえ",
     enabled: "はい",
     initial: true,
