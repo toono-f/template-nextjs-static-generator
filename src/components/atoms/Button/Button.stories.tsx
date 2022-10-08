@@ -1,11 +1,11 @@
 import { Button } from "@/components/atoms/Button";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
-export default { component: Button } as ComponentMeta<typeof Button>;
+type T = typeof Button;
+type Story = ComponentStoryObj<T>;
 
-export const Index: ComponentStoryObj<typeof Button> = {
-  args: {
-    href: "/",
-    children: "Button",
-  },
+export default { component: Button } as ComponentMeta<T>;
+
+export const Default: Story = {
+  args: {},
 };
