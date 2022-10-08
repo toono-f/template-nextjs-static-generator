@@ -7,5 +7,8 @@ type Story = ComponentStoryObj<T>;
 export default { component: Button } as ComponentMeta<T>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    href: "/",
+    children: <>button</>,
+  },
 };
