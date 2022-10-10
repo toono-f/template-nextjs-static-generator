@@ -12,6 +12,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "storyshots": "jest --config ./jest.config.storyshots.js",
+    "storyshots:image": "jest --config ./jest.config.storyshotsImage.js",
     "tailwind-config-viewer": "tailwind-config-viewer -o",
     "hygen:component": "hygen component new",
     "hygen:page": "hygen page new"
@@ -39,6 +40,7 @@
     "@storybook/addon-links": "^6.5.12",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addon-storyshots": "^6.5.12",
+    "@storybook/addon-storyshots-puppeteer": "^6.5.12",
     "@storybook/builder-webpack5": "^6.5.12",
     "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/preset-scss": "^1.0.3",
@@ -67,6 +69,7 @@
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
+    "puppeteer": "^18.2.1",
     "sass": "^1.54.9",
     "sass-loader": "^13.0.2",
     "storybook-addon-next-router": "^4.0.0",
