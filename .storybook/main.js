@@ -24,7 +24,23 @@ module.exports = {
   },
   staticDirs: ["../public"],
   webpackFinal: async (config, { configType }) => {
-    config.resolve.alias["@"] = rootPath;
+    config.resolve.alias["@"] = rootPath; // tsconfig.jsonと同様の設定
+    config.resolve.modules = [...(config.resolve.modules || []), path.resolve("./")]; // 絶対パスでimportできるようにする
+
+    // SVGR関連設定
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            svgo: false,
+          },
+        },
+      ],
+    });
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test(".svg"));
+    fileLoaderRule.exclude = /\.svg$/;
     return config;
   },
 };
