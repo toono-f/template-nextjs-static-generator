@@ -6,8 +6,8 @@ const createJestConfig = nextJest({
 
 const customJestConfig = {
   moduleNameMapper: {
-    // tsconfig.jsonのcompilerOptions>pathsの定義に合わせる
-    "^@/(.*)$": "<rootDir>/src/$1",
+    "^@/(.*)$": "<rootDir>/src/$1", // tsconfig.jsonのcompilerOptions>pathsの定義に合わせる
+    "^.+\\.(svg)$": "<rootDir>/src/tests/component-type/__mocks__/SvgrMock.tsx", // 参考: https://github.com/vercel/next.js/discussions/31152#discussioncomment-3659373
   },
   testEnvironment: "jest-environment-jsdom",
   setupFilesAfterEnv: ["<rootDir>/src/tests/jest.customMatchers.ts"],
