@@ -8,7 +8,7 @@ export default { component: SvgIcon, args: {} } as ComponentMeta<T>;
 
 export const Default: Story = {
   args: {
-    fileName: "icon",
+    fileName: "Alert",
     width: 20,
     height: 20,
     stroke: "red",

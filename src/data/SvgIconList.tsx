@@ -1,12 +1,12 @@
-import AlertIcon from "public/icon/alert-icon.svg";
+import AlertIcon from "public/icon/alert.svg";
 import { SVGAttributes } from "react";
 
 export type SvgIconProps = SVGAttributes<SVGElement> & {
-  fileName: string;
+  fileName: "Alert";
   width: number;
   height: number;
 };
 
-export const Icon = (props: SvgIconProps) => {
+export const Alert = (props: SvgIconProps) => {
   return <AlertIcon {...props} />;
 };
